@@ -1,0 +1,26 @@
+server:
+  port: 8082
+management:
+  endpoints:
+    web:
+      #open all endporint for web
+      exposure:
+        include: "*"
+#  server:
+#    address: 127.0.0.1
+#    port: 8083
+spring:
+  boot:
+    admin:
+      client:
+        url: http://localhost:8082
+        username: admin
+        password: admin
+        instance:
+          metadata:
+            user.name: admin
+            user.password: admin
+  security:
+    user:
+      name: admin
+      password: admin
